@@ -33,9 +33,9 @@ const reducer = (state, action) => {
 // define intital state
 const initialState = { title: '', note: '', error: null };
 
-const reducerStore = () => {
+const ReducerStore = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return { state, dispatch };
 };
 
-export default reducerStore;
+export default ReducerStore;

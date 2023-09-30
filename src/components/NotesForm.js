@@ -1,4 +1,4 @@
-import reducerStore from '../store/reducer';
+import reducerStore from '../store/Reducer';
 
 const NotesForm = ({ fetchNotes }) => {
   const { state, dispatch } = reducerStore();
