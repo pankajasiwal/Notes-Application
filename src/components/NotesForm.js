@@ -20,11 +20,11 @@ const NotesForm = ({ fetchNotes }) => {
     if (!response.ok) {
       dispatch({ type: 'error', value: 'something went wrong' });
       return;
+    } else {
+      // console.log(response);
+      fetchNotes();
+      dispatch({ type: 'reset' });
     }
-
-    // console.log(response);
-    fetchNotes();
-    dispatch({ type: 'reset' });
   };
 
   return (
@@ -51,7 +51,7 @@ const NotesForm = ({ fetchNotes }) => {
         />
       </div>
       <div className='mt-4'>
-        <button className='border-2 px-5 py-1 rounded-sm' onClick={submitHandler}>
+        <button className='border px-5 py-1 rounded-lg hover:bg-stone-900' onClick={submitHandler}>
           Submit
         </button>
       </div>

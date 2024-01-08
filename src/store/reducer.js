@@ -21,10 +21,7 @@ const reducer = (state, action) => {
       error: null,
     };
   } else if (action.type === 'error') {
-    setTimeout(() => {
-      return { title: '', note: '', error: action.value };
-    }, 5000);
-    return initialState;
+    return { title: '', note: '', error: action.value };
   } else {
     return initialState;
   }
