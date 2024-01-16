@@ -61,7 +61,7 @@ function App() {
         {state.error ? (
           <p className='mt-8 capitalize text-center text-2xl'>{state.error}</p>
         ) : (
-          <NotesCard notes={filteredNotes} deleteNote={deleteNote} />
+          <NotesCard notes={filteredNotes} deleteNote={deleteNote} fetchNotes={fetchNotes} />
         )}
       </div>
     </div>
